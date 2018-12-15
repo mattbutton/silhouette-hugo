@@ -1,0 +1,104 @@
+{{ define "head" }}
+  {{ if .IsHome }}
+    <style type="text/css">
+      .feature-image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.15), 
+            rgba(0, 0, 0, 0.15)
+          ), url('{{ "/images/hero-main.jpg" | absURL }}');
+          height: 500px;
+      }
+
+      .feature-image-text {
+          margin-top: 20px;
+      }
+
+      @media (min-width: 1200px) {
+        .feature-image {
+            background-position: 0% 30%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .feature-image {
+            height: 250px;
+            background-position: 0% 0%;
+        }
+      }
+    </style>
+  {{ else }}
+    <style type="text/css">
+      .feature-image {
+        background-color: #F8F8F8;;
+        border-bottom: 1px dotted #BBB;
+        height: 150px;
+      }
+    </style>
+  {{ end }}
+{{ end }}
+{{ define "header" }}
+  {{ if .IsHome }}
+    <header class="feature-image">
+        <div class="feature-image-text white-shadow-text">
+            {{ partial "header-about-me" . }}
+        </div>
+    </header>
+  {{ end }}
+  {{ if not .IsHome }}
+
+    <header class="feature-image">
+        <div class="feature-image-text">
+            <h1 class="text-center">{{ .Title }}</h1>
+
+            {{ $title := urlize .Title }}
+            {{ with .Site.Taxonomies.categories }}
+              {{ range $name, $taxonomy := . }}
+                {{ $term := urlize $name }}
+                {{ if eq $term $title }}
+                  A {{ $taxonomy.Count }}-post collection
+                {{ end }}
+              {{ end }}
+            {{ end }}
+
+
+            {{ $title := urlize .Title }}
+            {{ with .Site.Taxonomies.tags }}
+              {{ range $name, $taxonomy := . }}
+                {{ $term := urlize $name }}
+                {{ if eq $term $title }}
+                  A {{ $taxonomy.Count }}-post collection
+                {{ end }}
+              {{ end }}
+            {{ end }}
+        </div>
+    </header>
+  {{ end }}
+{{ end }}
+{{ define "main" }}
+  <div class="container mt-4 mb-4 recent-posts">
+    {{ $paginator := .Paginate (where .Pages "Type" "post") 10 }}
+    {{ range (.Paginator 10).Pages }}
+      <article class="post">
+        <a class="title" href="{{ .Permalink }}"><h1>{{ .Title }}</h1></a>
+        {{ partial "post-meta" . }}
+        <div>
+            {{ .Summary }}
+        </div>
+        <div>
+            <a href="{{ .Permalink }}" class="btn btn-outline-secondary" role="button">Continue Reading...</a>
+        </div>
+      </article>
+    {{ end }}
+    <div class="d-flex justify-content-center">
+        {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+  {{ if .IsHome }}
+  {{ partial "sidebar-no-about" . }}
+  {{ else }}
+  {{ partial "sidebar" . }}
+  {{ end }}
+{{ end }}
+
+
+

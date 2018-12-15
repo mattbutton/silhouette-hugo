@@ -1,0 +1,58 @@
+{{ define "head" }}
+    {{ partial "head-meta" . }}
+
+    {{ with .Param "featureImage" }}
+    <style type="text/css">
+        .feature-image {
+            background-image: url("{{ . | absURL | safeCSS}}");
+            height: 500px;
+        }
+
+        @media (max-width: 992px) {
+            .feature-image {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feature-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .feature-image {
+                height: 200px;
+            }
+        }
+    </style>
+    {{ end }}
+{{ end }}
+{{ define "title" }}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "header" }}
+<header class="feature-image d-print-none">
+</header>
+{{ end }}
+{{ define "main" }}
+<div class="container mt-4 post">
+    <h1>{{ .Title }}</h1>
+    {{ partial "post-meta" . }}
+
+    <div class="share-icons d-flex justify-content-center d-print-none">
+        {{ partial "share-icons" . }}
+    </div>
+
+    <div class="mt-4 mb-4 main-content">
+        {{ .Content }}
+
+        <div class="share-icons d-flex justify-content-center d-print-none">
+            {{ partial "share-icons" . }}
+        </div>
+    </div>
+
+    {{ template "_internal/disqus.html" . }}
+</div>
+{{ partial "sidebar" . }}
+{{ end }}

@@ -1,0 +1,7 @@
+<div class="mb-3">
+    <small>
+        <strong>By {{ if .Params.Author }}{{ .Params.Author }}{{ else }}{{ .Site.Params.Author }}{{ end }}</strong>
+        | <i class="far fa-calendar-alt"></i>&nbsp;{{- .Date.Format "Jan 2, 2006" -}}&nbsp;
+        | <i class="fa fa-tags" title="Tags" aria-hidden="true"></i> {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}<a href='/tags/{{ (replace $e "#" "%23") | urlize }}/'>{{ $e }}</a>{{ end }}
+    </small>
+</div>

@@ -1,0 +1,17 @@
+baseurl = "https://example.com"
+title = "gohugo.io"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+canonifyurls = true
+paginate = 3
+theme = "silhouette-hugo"
+
+pygmentsUseClasses=true
+
+#disqusShortname = ""
+#googleAnalytics = ""
+
+[Params]
+author = "Steve Francia"
+introDescription = "Hi, I'm Steve Francia. Author, Speaker, Developer, Creator of Hugo, Cobra and spf13-vim. Former Docker and MongoDB."
+contentSharing = "I'm happy for you to share content on this site, but please provide attribution."
