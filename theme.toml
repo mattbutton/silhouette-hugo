@@ -4,7 +4,7 @@
 name = "Silhouette Hugo"
 license = "MIT"
 licenselink = "https://github.com/mattbutton/silhouette-hugo/blob/master/LICENSE"
-description = ""
+description = "A responsive blog theme for Hugo."
 homepage = "https://www.mattbutton.com/"
 tags = ["blog, responsive, personal, bootstrap, disqus, google analytics, syntax highligting, font awesome, landing page, flexbox"]
 features = ["blog", "bootstrap","responsive"]

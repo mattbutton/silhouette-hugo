@@ -1,6 +1,6 @@
 # Hugo Silhouette Theme
 
-A theme for [Hugo](https://gohugo.io), created by [Matt Button](https://www.mattbutton.com).
+A responsive blog theme for [Hugo](https://gohugo.io), created by [Matt Button](https://www.mattbutton.com).
 
 Based on [Bootstrap 4.1](https://getbootstrap.com/).
 
