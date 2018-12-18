@@ -13,8 +13,7 @@ categories = [
     "golang",
 ]
 menu = "main"
-featureImage = "/images/hugo-logo.png"
-featureText = "FOO"
+featureImage = "images/hugo-logo.png"
 +++
 
 First, go to [Hugo releases](https://github.com/spf13/hugo/releases) and download the
