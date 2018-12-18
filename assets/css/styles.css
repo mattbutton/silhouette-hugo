@@ -70,7 +70,8 @@ a,
 
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
-    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0;
 }
 
 .top-nav a,
