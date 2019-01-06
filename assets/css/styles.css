@@ -74,6 +74,10 @@ a,
     padding: 0;
 }
 
+.navbar-brand img {
+    vertical-align: baseline;
+}
+
 .top-nav a,
 .top-nav a:hover {
     text-decoration: none;

@@ -27,7 +27,7 @@
     <body>
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark py-1 top-nav">
             <div class="container">
-                <a class="navbar-brand pr-2" href="{{ .Site.BaseURL }}">{{ .Site.Title | upper }}</a>
+                    {{ partial "navbar-brand" . }}
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
