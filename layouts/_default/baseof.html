@@ -12,13 +12,13 @@
         <link rel="icon" type="image/png" href='{{ "images/favicon-16x16.png" | absURL }}' sizes="16x16">
         <link rel="icon" type="image/png" href='{{ "images/favicon-32x32.png" | absURL }}' sizes="32x32">  
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">      
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         
-        {{ $plugins := resources.Get "css/styles.css" }}
-        {{ $global := resources.Get "css/syntax.css" }}
-        {{ $styles := slice $plugins $global | resources.Concat "css/bundle.css" | minify | fingerprint }}
+        {{ $styles := resources.Get "css/styles.css" }}
+        {{ $syntax := resources.Get "css/syntax.css" }}
+        {{ $styles := slice $styles $syntax | resources.Concat "css/bundle.css" | minify | fingerprint }}
 
         <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"  />
 

@@ -14,33 +14,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
     word-wrap: break-word;
-}
-
-h1, .h1 {
-    font-size: 2rem;
-}
-
-h2, .h2 {
-    font-size: 1.75rem;
-}
-
-h3, .h3 {
-    font-size: 1.5rem;
-}
-
-h4, .h4 {
-    font-size: 1.25rem;
-}
-
-h5, .h5 {
-    font-size: 1rem;
-}
-
-h6, .h6 {
-    font-size: .75rem;
 }
 
 hr {
@@ -119,12 +93,6 @@ footer a {
     color: #e3d096 !important;
 }
 
-.recent-posts a.title,
-.recent-posts a.title:hover {
-    color: #222;
-    text-decoration: none;
-}
-
 footer .icons a {
     font-size: 1.2rem;
     margin: 0 8px;
@@ -144,8 +112,7 @@ footer hr {
 }
 
 .post h1,
-.post h2,
-.recent-posts h4,
+.recent-posts h2,
 .sidebar h2 {
     padding-bottom: 10px;
     border-bottom: 1px dotted #2c2a24;
@@ -153,6 +120,12 @@ footer hr {
 
 .recent-posts .post {
     margin-bottom: 4rem;
+}
+
+.recent-posts a.title,
+.recent-posts a.title:hover {
+    color: #222;
+    text-decoration: none;
 }
 
 .top-nav {
