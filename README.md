@@ -47,6 +47,13 @@ Then clone this repository:
   $ git clone https://github.com/mattbutton/silhouette-hugo.git
 ```
 
+Add the theme to your site's config file:
+
+```
+  $ cd ..
+  $ echo 'theme = "silhouette-hugo"' >> config.toml
+```
+
 Now take a look at the exampleSite folder and you're ready to go!
 
 ## License
