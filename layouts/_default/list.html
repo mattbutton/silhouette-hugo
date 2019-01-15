@@ -76,7 +76,7 @@
 {{ end }}
 {{ define "main" }}
   <div class="container mt-4 mb-4 recent-posts">
-    {{ $paginator := .Paginate (where .Pages "Type" "post") 10 }}
+    {{ $paginator := .Paginate (where (where .Pages "Type" "post") "Params.hidden" "!=" true) 10 }}
     {{ range (.Paginator 10).Pages }}
       <article class="post">
         <a class="title" href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
