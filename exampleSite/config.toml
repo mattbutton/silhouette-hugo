@@ -11,7 +11,13 @@ pygmentsUseClasses=true
 #disqusShortname = ""
 #googleAnalytics = ""
 
-[Params]
+[params]
 author = "Steve Francia"
 introDescription = "Hi, I'm Steve Francia. Author, Speaker, Developer, Creator of Hugo, Cobra and spf13-vim. Former Docker and MongoDB."
 contentSharing = "I'm happy for you to share content on this site, but please provide attribution."
+
+[social]
+instagram = "realmattbutton"
+linkedin = "matt-button-2225537"
+twitter = "realmattbutton"
+

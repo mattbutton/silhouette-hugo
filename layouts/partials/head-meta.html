@@ -1,6 +1,13 @@
-<link rel="me" type="text/html" href="https://twitter.com/sombradelrio"/> 
-<link rel="me" type="text/html" href="https://www.linkedin.com/pub/matt-button/7/553/222"/> 
-<link rel="me" type="text/html" href="https://www.instagram.com/sombradelrio/" />
+{{ with .Site.Social.instagram -}}
+<link rel="me" type="text/html" href="https://www.instagram.com/{{ . }}/" />
+{{ end -}}
+{{ with .Site.Social.twitter -}}
+<link rel="me" type="text/html" href="https://twitter.com/{{ . }}"/> 
+{{ end -}}
+{{ with .Site.Social.linkedin -}}
+<link rel="me" type="text/html" href="https://www.linkedin.com/in/{{ . }}/"/> 
+{{ end -}}
+
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 
