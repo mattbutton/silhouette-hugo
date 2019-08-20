@@ -79,9 +79,12 @@
 {{ end }}
 {{ define "main" }}
   <div class="container mt-4 mb-4 recent-posts">
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) 10 }}
-    {{ range $paginator.Pages }}
+      {{ $pages := .Pages }}
+      {{ if .IsHome }}
+      {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ end }}
+      {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) 10 }}
+      {{ range $paginator.Pages }}
       <article class="post">
         <a class="title" href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
         {{ partial "post-meta" . }}
