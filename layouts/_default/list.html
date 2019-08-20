@@ -50,23 +50,26 @@
         <div class="feature-image-text">
             <h1 class="text-center">{{ .Title }}</h1>
 
-            {{ $title := urlize .Title }}
-            {{ with .Site.Taxonomies.categories }}
-              {{ range $name, $taxonomy := . }}
-                {{ $term := urlize $name }}
-                {{ if eq $term $title }}
-                  A {{ $taxonomy.Count }}-post collection
+            {{ if eq .Type "categories" }}
+              {{ $title := urlize .Title }}
+              {{ with .Site.Taxonomies.categories }}
+                {{ range $name, $taxonomy := . }}
+                  {{ $term := urlize $name }}
+                  {{ if eq $term $title }}
+                    A {{ $taxonomy.Count }}-post collection
+                  {{ end }}
                 {{ end }}
               {{ end }}
             {{ end }}
 
-
-            {{ $title := urlize .Title }}
-            {{ with .Site.Taxonomies.tags }}
-              {{ range $name, $taxonomy := . }}
-                {{ $term := urlize $name }}
-                {{ if eq $term $title }}
-                  A {{ $taxonomy.Count }}-post collection
+            {{ if eq .Type "tags" }}
+              {{ $title := urlize .Title }}
+              {{ with .Site.Taxonomies.tags }}
+                {{ range $name, $taxonomy := . }}
+                  {{ $term := urlize $name }}
+                  {{ if eq $term $title }}
+                    A {{ $taxonomy.Count }}-post collection
+                  {{ end }}
                 {{ end }}
               {{ end }}
             {{ end }}
