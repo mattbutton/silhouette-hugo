@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/mattbutton/silhouette-hugo/blob/master/LICENSE"
 description = "A responsive blog theme for Hugo."
 homepage = "https://www.mattbutton.com/"
-tags = ["blog, responsive, personal, bootstrap, disqus, google analytics, syntax highligting, font awesome, landing page, flexbox"]
+tags = ["blog, responsive, personal, bootstrap, disqus, google analytics, syntax highlighting, font awesome, landing page, flexbox"]
 features = ["blog", "bootstrap","responsive"]
 min_version = "0.51"
 

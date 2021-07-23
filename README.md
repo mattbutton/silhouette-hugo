@@ -32,29 +32,39 @@ In 2018 I rebuilt the theme using [Bootstrap 4.1](https://getbootstrap.com/), an
 
 The silhouette image is taken from [this photo](https://unsplash.com/photos/85J99sGggnw) by Karl Magnuson.
 
-## Usage
+## Quickstart
 
 Create a new Hugo site by typing
 
 ```
-  $ hugo new site <SITENAME>
+hugo new site <SITENAME>
 ```
 
 Then clone this repository:
 
 ```
-  $ cd <SITENAME>/themes
-  $ git clone https://github.com/mattbutton/silhouette-hugo.git
+cd <SITENAME>/themes
+git clone https://github.com/mattbutton/silhouette-hugo.git
 ```
 
 Add the theme to your site's config file:
 
 ```
-  $ cd ..
-  $ echo 'theme = "silhouette-hugo"' >> config.toml
+cd ..
+echo 'theme = "silhouette-hugo"' >> config.toml
 ```
 
-Now take a look at the exampleSite folder and you're ready to go!
+If you want some starter content, you can copy some from the `exampleSite` folder:
+
+```
+cp -r themes/silhouette-hugo/exampleSite/* .
+```
+
+Then start up the site via:
+
+```
+hugo serve -D
+```
 
 ## License
 
