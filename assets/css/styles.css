@@ -1,3 +1,5 @@
+/* Base */
+
 body {
     background-color: #fafafa !important;
     padding-top: 42px;
@@ -36,6 +38,13 @@ a,
     word-wrap: break-word;
 }
 
+/* Navbar */
+
+.top-nav {
+    color: #fff;
+    border-color: rgba(255,255,255,0);
+}
+
 .top-nav .container {
     max-width: 1575px;
     padding-left: 0;
@@ -58,6 +67,8 @@ a,
     color: #fff;
 }
 
+/* sidebar (TODO: refactor this) */
+
 a.card {
     text-decoration: none;
     color: #000;
@@ -74,6 +85,8 @@ footer,
     color: #847b79;
     background-color: #eeedea;
 }
+
+/* footer */
 
 footer {
     background-color: #27343c;
@@ -103,6 +116,8 @@ footer hr {
     margin: 30px 0;
 }
 
+/* main content */
+
 .main-content {
     flex: 1 0 auto;
 }
@@ -118,6 +133,8 @@ footer hr {
     border-bottom: 1px dotted #2c2a24;
 }
 
+/* recent posts */
+
 .recent-posts .post {
     margin-bottom: 4rem;
 }
@@ -128,10 +145,7 @@ footer hr {
     text-decoration: none;
 }
 
-.top-nav {
-    color: #fff;
-    border-color: rgba(255,255,255,0);
-}
+/* share icons */
 
 .share-icons {
     font-size: 1.2em;
@@ -144,6 +158,8 @@ footer hr {
 .share-icons .fa-inverse {
     color: #847b79;
 }
+
+/* feature image */
 
 .feature-image,
 .feature-banner {
@@ -178,6 +194,8 @@ footer hr {
     font-size: 1.6rem;
 }
 
+/* sidebar */
+
 .sidebar {
     background-color: #F8F8F8;
     border-left: 1px dotted #BBB;
@@ -190,6 +208,8 @@ footer hr {
     background-color: #eee;
 }
 
+/* buttons */
+
 .btn-outline-secondary {
     color: #333;
     background-color: #fff;
@@ -201,6 +221,8 @@ a.btn-outline-secondary:hover {
     background-color: #e6e6e6;
     border-color: #adadad;
 }
+
+/* blockquotes */
 
 .blockquote {
     margin: 25px auto;
